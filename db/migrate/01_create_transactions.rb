@@ -1,7 +1,7 @@
 class CreateTransactions < ActiveRecord::Migration[5.1]
 
   def change
-    create_table :shares do |t|
+    create_table :transactions do |t|
       t.integer :company_id
       t.boolean :buy
     end

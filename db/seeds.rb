@@ -2421,8 +2421,8 @@ data = {
 
 data[:IPOPerformances].each do |company_hash|
   binding.pry
-  Company.create(name: company_hash[:Name], open_price: company_hash[:OfferPrice], close_price: company_hash[:ClosePrice])
-    end
+  Company.create(name: company_hash[:Name], open_price: company_hash[:OfferPrice].to_s, close_price: company_hash[:ClosePrice].to_s)
+end
 
 
 # company_names = data[:IPOPerformances].map { |company| company[:Name] }

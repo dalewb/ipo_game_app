@@ -14,16 +14,16 @@ ActiveRecord::Schema.define(version: 3) do
 
   create_table "companies", force: :cascade do |t|
     t.string "name"
-    t.integer "open_price"
-    t.integer "close_price"
+    t.string "open_price"
+    t.string "close_price"
   end
 
   create_table "investments", force: :cascade do |t|
     t.string "name"
-    t.decimal "account_balance"
+    t.integer "account_balance"
   end
 
-  create_table "shares", force: :cascade do |t|
+  create_table "transactions", force: :cascade do |t|
     t.integer "company_id"
     t.boolean "buy"
   end
