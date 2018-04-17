@@ -1,7 +1,7 @@
 class CrerateUsers < ActiveRecord::Migration
 
   def change
-    create_table do |t|
+    create_table :users do |t|
       t.string :name
       t.decimal :acct_balance
     end

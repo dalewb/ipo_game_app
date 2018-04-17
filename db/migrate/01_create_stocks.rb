@@ -1,7 +1,7 @@
-class CreateStocks < ActiveRecord::Migration
+class CreateShares < ActiveRecord::Migration
 
   def change
-    create_table do |t|
+    create_table :shares do |t|
       t.integer :company_id
       t.datetime :open_date
       t.datetime :close_date
