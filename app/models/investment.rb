@@ -1,4 +1,4 @@
 class Investment < ActiveRecord::Base
-  belongs_to :user
-  has_many :shares
+  has_many :transactions
+  has_many :companies, through: :transactions
 end

@@ -1,3 +1,5 @@
 class Company < ActiveRecord::Base
-  has_many :shares 
+  has_many :transactions
+  has_many :investments, through: :transactions
+
 end

@@ -2,8 +2,8 @@ class CreateInvestments < ActiveRecord::Migration[5.1]
 
   def change
     create_table :investments do |t|
-      t.integer :user_id
-      t.integer :share_id
+      t.string :name
+      t.decimal :account_balance
     end
   end
 

@@ -10,29 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 4) do
+ActiveRecord::Schema.define(version: 3) do
 
   create_table "companies", force: :cascade do |t|
     t.string "name"
+    t.integer "open_price"
+    t.integer "close_price"
   end
 
   create_table "investments", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "share_id"
+    t.string "name"
+    t.decimal "account_balance"
   end
 
   create_table "shares", force: :cascade do |t|
     t.integer "company_id"
-    t.datetime "open_date"
-    t.datetime "close_date"
-    t.decimal "open_price"
-    t.decimal "close_price"
-    t.integer "percentage_change"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.decimal "acct_balance"
+    t.boolean "buy"
   end
 
 end

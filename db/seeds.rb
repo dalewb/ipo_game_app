@@ -1,4 +1,4 @@
-require "pry"
+
 
 
 
@@ -2417,10 +2417,18 @@ data = {
 ]
 }
 
-company_names = data[:IPOPerformances].map { |company| company[:Name] }
 
-info_by_company_name = {}
-data[:IPOPerformances].each {|company| info_by_company_name[company[:Name]] = company}
-info_by_company_name
-binding.pry
+
+data[:IPOPerformances].each do |company_hash|
+  binding.pry
+  Company.create(name: company_hash[:Name], open_price: company_hash[:OfferPrice], close_price: company_hash[:ClosePrice])
+    end
+
+
+# company_names = data[:IPOPerformances].map { |company| company[:Name] }
+#
+# info_by_company_name = {}
+# data[:IPOPerformances].each {|company| info_by_company_name[company[:Name]] = company}
+# info_by_company_name
+
 true
