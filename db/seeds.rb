@@ -2424,7 +2424,7 @@ data[:IPOPerformances].each do |company_hash|
 end
 
 Transaction.create(company_id: 11, num_of_shares: 10, buy: true)
-  # binding.pry
+  binding.pry
 
 # company_names = data[:IPOPerformances].map { |company| company[:Name] }
 #
