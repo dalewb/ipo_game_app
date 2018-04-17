@@ -2,7 +2,7 @@ class CreateStocks < ActiveRecord::Migration
 
   def change
     create_table do |t|
-      t.integer :copany_id
+      t.integer :company_id
       t.datetime :open_date
       t.datetime :close_date
       t.integer :open_price
