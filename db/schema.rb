@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 3) do
+ActiveRecord::Schema.define(version: 4) do
 
   create_table "companies", force: :cascade do |t|
     t.string "name"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 3) do
   create_table "transactions", force: :cascade do |t|
     t.integer "company_id"
     t.boolean "buy"
+    t.integer "num_of_shares"
   end
 
 end

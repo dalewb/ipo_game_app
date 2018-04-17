@@ -11,7 +11,7 @@ Rails.application.initialize!
   end
 
   def get_company
-    @company_name = prompt.select("Choose a company to invest in:", company_names)
+    @company_name = prompt.select("Choose a company to invest in:", Company.all_names)
   end
 
   # share instance
