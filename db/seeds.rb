@@ -2419,6 +2419,8 @@ data = {
 
 company_names = data[:IPOPerformances].map { |company| company[:Name] }
 
-
+info_by_company_name = {}
+data[:IPOPerformances].each {|company| info_by_company_name[company[:Name]] = company}
+info_by_company_name
 binding.pry
 true
